@@ -1,8 +1,7 @@
--D coconut
--cp src
--lib tink_csss
--lib tink_hxx
+# @install: lix download https://github.com/MVCoconut/coconut/archive/27e04f327fe419d1780879dfc70b4fce58e9769f.tar.gz as coconut#0.0.0/27e04f327fe419d1780879dfc70b4fce58e9769f
+-D coconut=0.0.0
+-cp ${HAXESHIM_LIBCACHE}/coconut/0.0.0/27e04f327fe419d1780879dfc70b4fce58e9769f/src
+
 -lib tink_state
--lib tink_pure
--lib tink_lang
+-lib tink_hxx
 -lib js-virtual-dom
