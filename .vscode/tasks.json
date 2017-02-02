@@ -1,6 +1,9 @@
 {
+    "windows": {
+      "command": "node_modules\\.bin\\haxe.cmd"
+    },
     "version": "0.1.0",
-    "command": "haxe",
+    "command": "./node_modules/.bin/haxe",
     "args": ["todomvc.hxml", "--times"],
     "problemMatcher": {
         "owner": "haxe",
