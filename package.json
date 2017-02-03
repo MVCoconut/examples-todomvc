@@ -9,7 +9,8 @@
   "dependencies": {
     "lix.pm": "*",
     "switchx": "*",
-    "haxeshim": "*"
+    "haxeshim": "*",
+    "less": "2.7.2"
   },
   "scripts": {
     "postinstall": "switchx install && lix download",
