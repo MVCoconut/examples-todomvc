@@ -1,4 +1,5 @@
 -lib coconut
+-lib lessie
 -cp src
 -main TodoMvc
 -js bin/todomvc.js
