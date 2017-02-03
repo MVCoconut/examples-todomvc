@@ -5,17 +5,20 @@ import vdom.VDom.*;
 import todomvc.data.*;
 import coconut.ui.*;
 
+@:less("list.less")
 class TodoListView extends View<{todos:TodoList, filter:TodoFilter}> {
   function render() '
     <div class="todo-list">
-      <input type="text" onkeypress={e => if (e.keyCode == KeyboardEvent.DOM_VK_RETURN) { todos.add(e.target.value); e.target.value = ""; }} />
-      <if {todos.items.length > 0}>
-        <if {todos.items.exists(TodoItem.isActive)}>
-          <button onclick={[] => for (i in todos.items) i.completed = true}>Mark all as completed</button>
-        <else>
-          <button onclick={[] => for (i in todos.items) i.completed = false}>Unmark all as completed</button>
+      <header>
+        <input type="text" onkeypress={e => if (e.keyCode == KeyboardEvent.DOM_VK_RETURN) { todos.add(e.target.value); e.target.value = ""; }} />
+        <if {todos.items.length > 0}>
+          <if {todos.items.exists(TodoItem.isActive)}>
+            <button class="mark-all" onclick={[] => for (i in todos.items) i.completed = true}>Mark all as completed</button>
+          <else>
+            <button class="unmark-all" onclick={[] => for (i in todos.items) i.completed = false}>Unmark all as completed</button>
+          </if>
         </if>
-      </if>
+      </header>
       <ol>
         <for {item in todos.items}>
           <if {filter.matches(item)}>

@@ -1,0 +1,33 @@
+.todo-list {
+  max-width: 400px;
+  margin: 0 auto;
+  header {
+    display: flex;
+    align-items: center;
+    input[type="text"] {
+      flex-grow: 1;
+      &:only-child {
+        margin-left: 50px;
+      }
+    }
+    button {
+      order: -1;
+      background: 0;
+      border: 0;
+      font-size: 0;
+      flex-basis: 50px;
+      height: 50px;
+      &.mark-all:before {
+        opacity: .5;
+      }
+      &:before {
+        color: #737373;
+        margin: 0 auto;
+        font-size: 22px;
+        content: '❯';
+        transform: rotate(90deg);
+        display: block;
+      }
+    }
+  }
+}
