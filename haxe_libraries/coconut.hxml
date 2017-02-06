@@ -1,6 +1,6 @@
-# @install: lix download https://github.com/MVCoconut/coconut/archive/1177f2a829696f40cfe8216d57c07abd879e4edc.tar.gz as coconut#0.0.0/1177f2a829696f40cfe8216d57c07abd879e4edc
+# @install: lix download https://github.com/MVCoconut/coconut/archive/050c9d94de96a53707e812c9a4b519c02abfc26b.tar.gz as coconut#0.0.0/050c9d94de96a53707e812c9a4b519c02abfc26b
 -D coconut=0.0.0
--cp ${HAXESHIM_LIBCACHE}/coconut/0.0.0/1177f2a829696f40cfe8216d57c07abd879e4edc/src
+-cp ${HAXESHIM_LIBCACHE}/coconut/0.0.0/050c9d94de96a53707e812c9a4b519c02abfc26b/src
 
 -lib tink_state
 -lib tink_hxx
