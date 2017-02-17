@@ -1,4 +1,5 @@
 -lib coconut
+-lib coconut.data
 -lib lessie
 -cp src
 -main TodoMvc

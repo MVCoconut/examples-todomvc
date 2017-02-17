@@ -18,7 +18,8 @@ class TodoFilter implements Model {
 
   @:transition function toggle(filter:TodoItem->Bool) {
     for (o in options)
-      if (o.value == filter) currentFilter = filter;
+      if (o.value == filter) return { currentFilter: filter };
+    return {};
   }
   
   public function isActive(filter:TodoItem->Bool)
