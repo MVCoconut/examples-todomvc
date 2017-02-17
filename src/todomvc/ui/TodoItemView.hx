@@ -27,7 +27,9 @@ class TodoItemView extends View<{ item: TodoItem, ondeleted: Void->Void }> {
           <span class="description" ondblclick={_ => this.isEditing = true}>{item.description}</span>
           <button class="delete" onclick={ondeleted}>Delete</button>
         </if>
-        <span>{item.test}</span>
+        <div>
+          <p>{item.test}</p><p>{item.getTest()}</p>
+        </div>
       </div>
     ';
   }
