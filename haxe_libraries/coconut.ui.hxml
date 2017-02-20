@@ -1,0 +1,6 @@
+# @install: lix download https://lib.haxe.org/p/coconut.ui/0.1.0/download/ as coconut.ui#0.1.0/haxelib
+-D coconut.ui=0.1.0
+-cp ${HAXESHIM_LIBCACHE}/coconut.ui/0.1.0/haxelib/src
+
+-lib coconut.data
+-lib tink_lang
