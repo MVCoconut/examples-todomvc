@@ -1,7 +1,6 @@
 package todomvc.ui;
 
 import js.html.KeyboardEvent;
-import vdom.VDom.*;
 import todomvc.data.*;
 import coconut.ui.*;
 
