@@ -22,7 +22,7 @@ class TodoListView extends View<{todos:TodoList, filter:TodoFilter}> {
       <ol>
         <for {item in todos.items}>
           <if {filter.matches(item)}>
-            <TodoItemView item={item} ondeleted={todos.delete.bind(item)} />
+            <TodoItemView key={item} item={item} ondeleted={todos.delete.bind(item)} />
           </if>
         </for>
       </ol>

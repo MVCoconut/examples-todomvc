@@ -9,7 +9,7 @@ class TodoMvc {
 
     document.body.appendChild(
       hxx('
-        <todomvc.ui.TodoListView filter={new TodoFilter()} todos={new TodoList()}/>
+        <todomvc.ui.TodoListView key={null} filter={new TodoFilter()} todos={new TodoList()}/>
       ').toElement()
     );
   }

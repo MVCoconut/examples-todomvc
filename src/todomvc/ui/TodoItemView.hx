@@ -30,7 +30,7 @@ class TodoItemView extends View<{ item: TodoItem, ondeleted: Void->Void }> {
       </div>
     ';
   }
-  override function afterUpdate() 
+  override function afterPatching(_) 
     if (isEditing)
       get('input[type="text"]').focus();
   
