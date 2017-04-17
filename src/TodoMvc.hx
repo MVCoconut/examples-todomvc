@@ -10,7 +10,7 @@ class TodoMvc {
 
     document.body.appendChild(
       hxx('
-        <todomvc.ui.TodoListView filter={new TodoFilter()} todos={new TodoList()}/>
+        <TodoListView filter={new TodoFilter()} todos={new TodoList()}/>
       ').toElement()
     );
   }

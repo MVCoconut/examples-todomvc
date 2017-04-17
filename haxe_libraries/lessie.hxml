@@ -1,4 +1,4 @@
-# @install: lix download https://github.com/back2dos/lessie/archive/ba22b415d0f6bcdeb0f3c16aa8d36e90707d69d7.tar.gz as lessie#1.1.0/ba22b415d0f6bcdeb0f3c16aa8d36e90707d69d7
+# @install: lix --silent download https://github.com/back2dos/lessie/archive/40ea3e3d553850c1f0660c1773b67f5523b5e421.tar.gz into _NAME/_VERSION/github/40ea3e3d553850c1f0660c1773b67f5523b5e421
 -D lessie=1.1.0
--cp ${HAXESHIM_LIBCACHE}/lessie/1.1.0/ba22b415d0f6bcdeb0f3c16aa8d36e90707d69d7/src
+-cp ${HAXESHIM_LIBCACHE}/_NAME/_VERSION/github/40ea3e3d553850c1f0660c1773b67f5523b5e421/src
 --macro lessie.Lessie.use()
