@@ -1,6 +1,6 @@
-# @install: lix download https://lib.haxe.org/p/coconut.vdom/0.3.0/download/ as coconut.vdom#0.3.0/haxelib
--D coconut.vdom=0.3.0
--cp ${HAXESHIM_LIBCACHE}/coconut.vdom/0.3.0/haxelib/src
+# @install: lix download https://github.com/MVCoconut/coconut.vdom/archive/25389cbab8bd3c2005733f4e42e3dd65bf547dac.tar.gz as coconut.vdom#0.3.1/25389cbab8bd3c2005733f4e42e3dd65bf547dac
+-D coconut.vdom=0.3.1
+-cp ${HAXESHIM_LIBCACHE}/coconut.vdom/0.3.1/25389cbab8bd3c2005733f4e42e3dd65bf547dac/src
 --macro coconut.vdom.macros.Setup.all()
 -lib tink_hxx
 -lib tink_state

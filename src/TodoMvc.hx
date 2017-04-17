@@ -1,15 +1,16 @@
 package ;
 
 import js.Browser.*;
-import vdom.VDom.*;
+import coconut.Ui.hxx;
 import todomvc.data.*;
+import todomvc.ui.*;
 
 class TodoMvc {
   static function main() {
 
     document.body.appendChild(
       hxx('
-        <todomvc.ui.TodoListView key={null} filter={new TodoFilter()} todos={new TodoList()}/>
+        <todomvc.ui.TodoListView filter={new TodoFilter()} todos={new TodoList()}/>
       ').toElement()
     );
   }

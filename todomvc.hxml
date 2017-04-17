@@ -3,5 +3,6 @@
 -lib coconut.data
 -lib lessie
 -cp src
+-dce full
 -main TodoMvc
 -js bin/todomvc.js

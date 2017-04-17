@@ -2,11 +2,11 @@ package todomvc.ui;
 
 import todomvc.data.TodoItem;
 import coconut.ui.View;
-import vdom.VDom.*;
+
 using StringTools;
 
 @:less("item.less")
-class TodoItemView extends View<{ item: TodoItem, ondeleted: Void->Void }> {
+class TodoItemView extends View<{ item: TodoItem, ondeleted: TodoItem->Void }> {
   
   @:state var isEditing:Bool = false;
 
@@ -14,18 +14,18 @@ class TodoItemView extends View<{ item: TodoItem, ondeleted: Void->Void }> {
 
     function edit(entered:String)
       switch entered.rtrim() {
-        case '': ondeleted();
+        case '': ondeleted(item);
         case v: item.description = v;
       }
 
     return @hxx '
       <div class="todo-item" data-completed={item.completed} data-editing={isEditing}>
-        <input name="completed" type="checkbox" checked={item.completed} onchange={e => item.completed = e.target.checked} />
+        <input name="completed" type="checkbox" checked={item.completed} onchange={item.completed = event.target.checked} />
         <if {isEditing}>
-          <input name="description" type="text" value={item.description} onchange={e => edit(e.target.value)} onblur={_ => isEditing = false} />
+          <input name="description" type="text" value={item.description} onchange={edit(event.target.value)} onblur={isEditing = false} />
         <else>
-          <span class="description" ondblclick={_ => this.isEditing = true}>{item.description}</span>
-          <button class="delete" onclick={ondeleted}>Delete</button>
+          <span class="description" ondblclick={this.isEditing = true}>{item.description}</span>
+          <button class="delete" onclick={ondeleted(item)}>Delete</button>
         </if>
       </div>
     ';

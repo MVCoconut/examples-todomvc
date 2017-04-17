@@ -21,7 +21,7 @@ class TodoListView extends View<{todos:TodoList, filter:TodoFilter}> {
       <ol>
         <for {item in todos.items}>
           <if {filter.matches(item)}>
-            <TodoItemView key={item} item={item} ondeleted={todos.delete.bind(item)} />
+            <TodoItemView key={item} item={item} ondeleted={todos.delete(item)} />
           </if>
         </for>
       </ol>
@@ -33,7 +33,7 @@ class TodoListView extends View<{todos:TodoList, filter:TodoFilter}> {
           </switch> left
         </span>
         <for {f in filter.options}>
-          <button onclick={[] => filter.toggle(f.value)} data-active={filter.isActive(f.value)}>{f.name}</button>
+          <button onclick={filter.toggle(f.value)} data-active={filter.isActive(f.value)}>{f.name}</button>
         </for>
         <if {todos.items.exists(TodoItem.isCompleted)}>
           <button onclick={todos.clearCompleted}>Clear Completed</button>
