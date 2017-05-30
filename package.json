@@ -7,10 +7,10 @@
     "examples-todomvc": "todomvc.js"
   },
   "dependencies": {
-    "lix.pm": "*",
-    "switchx": "*",
-    "haxeshim": "*",
-    "less": "2.7.2"
+    "haxeshim": "^0.8.9",
+    "less": "2.7.2",
+    "lix.pm": "^0.8.0",
+    "switchx": "^0.11.3"
   },
   "scripts": {
     "postinstall": "switchx install && lix download",
