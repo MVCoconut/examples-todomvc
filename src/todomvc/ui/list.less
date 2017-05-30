@@ -1,14 +1,60 @@
 .todo-list {
-  max-width: 400px;
-  margin: 0 auto;
+  
+  border: 1px solid #cccccc;
+  padding: 30px;
+  margin: 50px auto;
+  width: 500px;
+  button {
+    &:focus {outline:0;}
+  }
+  footer {
+    margin-top: 30px;
+    position: relative;
+    font-size: .8em;
+    button {
+      font: inherit;
+      background: none;
+      border: none;
+      padding: 5px 10px;
+    }
+    menu {
+      justify-content: center;
+      display: flex;
+      button {
+        margin: 0 5px;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        &:hover {
+          border-color: #cccccc;
+        }
+        &[data-active] {
+          border-color: orange;
+        }
+      }
+    }
+    >span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 5px;
+      padding-left: 0;
+    }
+    >button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
   header {
     display: flex;
-    align-items: center;
+    margin-bottom: 30px;
     input[type="text"] {
       flex-grow: 1;
-      &:only-child {
-        margin-left: 50px;
-      }
+      padding-left: 50px;
+      height: 48px;
     }
     button {
       order: -1;
@@ -17,6 +63,7 @@
       font-size: 0;
       flex-basis: 50px;
       height: 50px;
+      margin-right: -50px;
       &.mark-all:before {
         opacity: .5;
       }

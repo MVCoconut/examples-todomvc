@@ -4,6 +4,6 @@
     },
     "version": "0.1.0",
     "command": "./node_modules/.bin/haxe",
-    "args": ["todomvc.hxml", "--times"],
+    "args": ["todomvc.hxml", "--times", "--connect", "6000"],
     "problemMatcher": "$haxe"
 }

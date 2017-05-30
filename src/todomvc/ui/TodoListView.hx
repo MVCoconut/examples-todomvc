@@ -25,20 +25,26 @@ class TodoListView extends View<{todos:TodoList, filter:TodoFilter}> {
           </if>
         </for>
       </ol>
-      <menu>
+      <footer>
+        
         <span>
           <switch {todos.items.count(TodoItem.isActive)}>
             <case {1}>1 item
             <case {v}>{v} items
           </switch> left
         </span>
-        <for {f in filter.options}>
-          <button onclick={filter.toggle(f.value)} data-active={filter.isActive(f.value)}>{f.name}</button>
-        </for>
+
+        <menu>
+          <for {f in filter.options}>
+            <button onclick={filter.toggle(f.value)} data-active={filter.isActive(f.value)}>{f.name}  </button>
+          </for>
+        </menu>
+
         <if {todos.items.exists(TodoItem.isCompleted)}>
           <button onclick={todos.clearCompleted}>Clear Completed</button>
         </if>
-      </menu>
+        
+      </footer>
     </div>
   ';
 }
