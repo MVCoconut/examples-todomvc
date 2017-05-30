@@ -1,6 +1,6 @@
-# @install: lix --silent download haxelib:tink_hxx#0.12.4 into tink_hxx/0.12.4/haxelib
+# @install: lix --silent download https://github.com/haxetink/tink_hxx/archive/27005e50b978ab0d69f0fc539592ea1d9099c5f5.tar.gz into tink_hxx/0.12.4/github/27005e50b978ab0d69f0fc539592ea1d9099c5f5
 -D tink_hxx=0.12.4
--cp ${HAXESHIM_LIBCACHE}/tink_hxx/0.12.4/haxelib/src
+-cp ${HAXESHIM_LIBCACHE}/tink_hxx/0.12.4/github/27005e50b978ab0d69f0fc539592ea1d9099c5f5/src
 
 -lib tink_parse
 -lib tink_macro
