@@ -7,4 +7,4 @@ This is an implementation of TodoMVC.
 ## Setup and Build
 
 1. **[lix](https://github.com/lix-pm/lix.client#lix---the-haxe-package-manager-that-rox--ba-dum-tss-) based setup**: `npm install` and use `npm run build` for building (or use the included VS Code setup)
-2. **using haxelib**: `haxelib install todomvc.hxml`, `npm install less` (unless you have less already of course) and `haxelib todomvc.hxml` for building. Please note that the haxelib based build may randomly break, because the dependencies are not locked down.
+2. **using haxelib**: `haxelib install todomvc.hxml`, `npm install less` (unless you have less already of course) and `haxe todomvc.hxml` for building. Please note that the haxelib based build may randomly break, because the dependencies are not locked down.
