@@ -2,7 +2,7 @@
 
 This is an implementation of TodoMVC. 
 
-[Online Demo](https://rawgit.com/back2dos/d863ab5e0e3310493e900f0f01d20327/raw/0d7befd0834315ed97415110d0f999c05c3cd9fe/index.html)
+[Online Demo](https://rawgit.com/back2dos/d863ab5e0e3310493e900f0f01d20327/raw/a30e2b801dc3e33cee7be1ef62c75248bb52cb89/index.html)
 
 ## Setup and Build
 
