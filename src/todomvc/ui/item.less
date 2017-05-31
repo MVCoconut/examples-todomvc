@@ -1,19 +1,5 @@
-html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: content-box;
-}
-
-button, input[type="checkbox"] {
-  cursor: pointer;
-}
-
-button, input {
-  font: inherit;
+ol {
+  border-top: 2px solid #e4e4e4;
 }
 
 .todo-item {
@@ -21,10 +7,11 @@ button, input {
   display: flex;
   align-items: center;
   position: relative;
-
+  list-style: none;
+  border-bottom: 1px solid #e4e4e4;
   .description, input[name="description"]  {
     flex-grow: 1;
-    padding: .5em;
+    padding: 15px;
   }
 
   input[name="description"] {
@@ -45,6 +32,10 @@ button, input {
   }
 
   input[name="completed"] {
+    margin-left: 4px;
+    left: 6px;
+    top: 2px;
+    position: relative;
     &:focus {outline:0;}
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -60,13 +51,17 @@ button, input {
 
   &:hover {
     button.delete {
-      opacity: 1;
+      opacity: .5;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
   button.delete {
     
-    flex-basis: 40px;
+    flex-basis: 60px;
+    align-self: stretch;
     opacity: 0;
     border: none;
     background: none;
@@ -74,8 +69,8 @@ button, input {
 
     &:after {
       content: "×";
-      font-size: 22px;
-      color: red;
+      font-size: 30px;
+      color: #af5b5b;
     }
   }
 }

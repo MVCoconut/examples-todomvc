@@ -19,7 +19,7 @@ class TodoItemView extends View<{ item: TodoItem, ondeleted: TodoItem->Void }> {
       }
 
     return @hxx '
-      <div class="todo-item" data-completed={item.completed} data-editing={isEditing}>
+      <li class="todo-item" data-completed={item.completed} data-editing={isEditing}>
         <input name="completed" type="checkbox" checked={item.completed} onchange={item.completed = event.target.checked} />
         <if {isEditing}>
           <input name="description" type="text" value={item.description} onchange={edit(event.target.value)} onblur={isEditing = false} />
@@ -27,7 +27,7 @@ class TodoItemView extends View<{ item: TodoItem, ondeleted: TodoItem->Void }> {
           <span class="description" ondblclick={this.isEditing = true}>{item.description}</span>
           <button class="delete" onclick={ondeleted(item)}>Delete</button>
         </if>
-      </div>
+      </li>
     ';
   }
   override function afterPatching(_) 

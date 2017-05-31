@@ -8,7 +8,6 @@ class TodoList implements Model {
   @:observable var items:List<TodoItem> = @byDefault null;
 
   @:transition function add(description:String) {
-    trace('call!');
     return { items: items.prepend(TodoItem.create(description)) };
   }
   
