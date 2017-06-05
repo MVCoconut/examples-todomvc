@@ -13,9 +13,9 @@ class TodoListView extends View<{todos:TodoList, filter:TodoFilter}> {
         <input type="text" placeholder="What needs to be done?" onkeypress={e => if (e.keyCode == KeyboardEvent.DOM_VK_RETURN) { todos.add(e.target.value); e.target.value = ""; }} />
         <if {todos.items.length > 0}>
           <if {todos.items.exists(TodoItem.isActive)}>
-            <button class="mark-all" onclick={[] => for (i in todos.items) i.completed = true}>Mark all as completed</button>
+            <button class="mark-all" onclick={for (i in todos.items) i.completed = true}>Mark all as completed</button>
           <else>
-            <button class="unmark-all" onclick={[] => for (i in todos.items) i.completed = false}>Unmark all as completed</button>
+            <button class="unmark-all" onclick={for (i in todos.items) i.completed = false}>Unmark all as completed</button>
           </if>
         </if>
       </header>
