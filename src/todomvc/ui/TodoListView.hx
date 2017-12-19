@@ -5,7 +5,9 @@ import todomvc.data.*;
 import coconut.ui.*;
 
 @:less("list.less")
-class TodoListView extends View<{todos:TodoList, filter:TodoFilter}> {
+class TodoListView extends View {
+  @:attribute var todos:TodoList;
+  @:attribute var filter:TodoFilter;
   function render() '
     <div class="todo-list" data-empty={todos.items.length == 0}>
       <h1>todos</h1>

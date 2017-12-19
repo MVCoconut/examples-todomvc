@@ -6,8 +6,9 @@ import coconut.ui.View;
 using StringTools;
 
 @:less("item.less")
-class TodoItemView extends View<{ item: TodoItem, ondeleted: TodoItem->Void }> {
-  
+class TodoItemView extends View {
+  @:attribute var item:TodoItem;
+  @:attribute var ondeleted:TodoItem->Void;
   @:state var isEditing:Bool = false;
 
   function render() {
