@@ -2,16 +2,11 @@ package ;
 
 import js.Browser.*;
 import coconut.Ui.hxx;
-import todomvc.data.*;
-import todomvc.ui.*;
+import todomvc.ui.TodoListView;
 
 class TodoMvc {
-  static function main() {
-
+  static function main() 
     document.body.appendChild(
-      hxx('
-        <TodoListView filter={new TodoFilter()} todos={new TodoList()}/>
-      ').toElement()
+      hxx('<TodoListView />').toElement()
     );
-  }
 }

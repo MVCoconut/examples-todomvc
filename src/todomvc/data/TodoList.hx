@@ -6,6 +6,8 @@ import tink.pure.List;
 class TodoList implements Model {
 
   @:observable var items:List<TodoItem> = @byDefault null;
+  @:computed var unfinished:Int = items.count(TodoItem.isActive);
+  @:computed var hasAnyCompleted:Bool = unfinished < items.length;
 
   @:transition function add(description:String) {
     return { items: items.prepend(TodoItem.create(description)) };

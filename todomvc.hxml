@@ -2,6 +2,8 @@
 -lib coconut.vdom
 -lib coconut.data
 -lib lessie
+-D closure_advanced
+-D closure_overwrite
 -cp src
 -dce full
 -main TodoMvc
