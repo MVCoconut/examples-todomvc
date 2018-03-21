@@ -20,7 +20,7 @@ class TodoItemView extends View {
       }
 
     return @hxx '
-      <li title="${this.viewId}" class="todo-item" data-completed=${item.completed} data-editing={isEditing}>
+      <li class="todo-item" data-completed=${item.completed} data-editing={isEditing}>
         <input name="completed" type="checkbox" checked=${item.completed} onchange={item.completed = event.target.checked} />
         <if ${isEditing}>
           <input name="description" type="text" value=${item.description} onchange={edit(event.target.value)} onblur={isEditing = false} />
