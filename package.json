@@ -2,18 +2,12 @@
   "name": "examples-todomvc",
   "version": "0.0.0",
   "description": "TodoMVCoconut",
-  "main": "bin/index.html",
-  "bin": {
-    "examples-todomvc": "todomvc.js"
-  },
   "dependencies": {
-    "haxeshim": "^0.8.9",
     "less": "2.7.2",
-    "lix.pm": "^0.8.0",
-    "switchx": "^0.11.3"
+    "lix": "=15.1.0-rc.2"
   },
   "scripts": {
-    "postinstall": "switchx install && lix download",
+    "postinstall": "lix download",
     "build": "haxe todomvc.hxml"
   },
   "repository": {
