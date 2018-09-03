@@ -30,7 +30,7 @@ private class Header extends View {
   @:attribute var todos:TodoList;
   function render() '
     <header>
-      <input type="text" placeholder="What needs to be done?" onkeypress={e => if (e.keyCode == KeyboardEvent.DOM_VK_RETURN) { todos.add(e.target.value); e.target.value = ""; }} />
+      <input type="text" placeholder="What needs to be done?" onkeypress={e => if (e.keyCode == KeyboardEvent.DOM_VK_RETURN) { todos.add(e.src.value); e.src.value = ""; }} />
       <if {todos.items.length > 0}>
         <if {todos.unfinished > 0}>
           <button class="mark-all" onclick={for (i in todos.items) i.completed = true}>Mark all as completed</button>
@@ -41,9 +41,9 @@ private class Header extends View {
     </header>
   ';
 
-  override function afterInit(_) {
-    @in(.01) @do get('header input').focus();
-  }
+  // override function afterMounting(_) 
+  //   get('header input').focus();
+  
 }
 
 private class Footer extends View {

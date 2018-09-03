@@ -6,7 +6,5 @@ import todomvc.ui.TodoListView;
 
 class TodoMvc {
   static function main() 
-    document.body.appendChild(
-      hxx('<TodoListView />').toElement()
-    );
+    document.body.appendChild(hxx('<TodoListView />').create());
 }

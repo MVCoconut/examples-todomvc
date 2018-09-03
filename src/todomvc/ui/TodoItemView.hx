@@ -21,9 +21,9 @@ class TodoItemView extends View {
 
     return @hxx '
       <li class="todo-item" data-completed=${item.completed} data-editing={isEditing}>
-        <input name="completed" type="checkbox" checked=${item.completed} onchange={item.completed = event.target.checked} />
+        <input name="completed" type="checkbox" checked=${item.completed} onchange={item.completed = event.src.checked} />
         <if ${isEditing}>
-          <input name="description" type="text" value=${item.description} onchange={edit(event.target.value)} onblur={isEditing = false} />
+          <input name="description" type="text" value=${item.description} onchange={edit(event.src.value)} onblur={isEditing = false} />
         <else>
           <span class="description" ondblclick=${this.isEditing = true}>{item.description}</span>
           <button class="delete" onclick=${ondeleted(item)}>Delete</button>
@@ -31,8 +31,8 @@ class TodoItemView extends View {
       </li>
     ';
   }
-  override function afterPatching(_) 
-    if (isEditing)
-      get('input[type="text"]').focus();
+  // override function afterPatching(_) 
+  //   if (isEditing)
+  //     get('input[type="text"]').focus();
   
 }
