@@ -1,0 +1,3 @@
+todomvc.hxml
+-lib coconut.vdom
+-js bin/todomvc-vdom.js

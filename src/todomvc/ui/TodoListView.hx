@@ -1,6 +1,6 @@
 package todomvc.ui;
 
-import js.html.KeyboardEvent;
+import js.html.*;
 import todomvc.data.*;
 import coconut.ui.*;
 
@@ -9,7 +9,7 @@ class TodoListView extends View {
   @:attribute var todos:TodoList = new TodoList();
   @:attribute var filter:TodoFilter = new TodoFilter();
   function render() '
-    <div class="todo-list" data-empty={todos.items.length == 0}>
+    <div class="todo-list" data-empty=${todos.items.length == 0}>
       <h1>todos</h1>
       <Header {...this} />
       <if {todos.items.length > 0}>
@@ -26,11 +26,12 @@ class TodoListView extends View {
   ';
 }
 
-private class Header extends View {
+class Header extends View {
   @:attribute var todos:TodoList;
+  @:ref var input:InputElement;
   function render() '
     <header>
-      <input type="text" placeholder="What needs to be done?" onkeypress={e => if (e.keyCode == KeyboardEvent.DOM_VK_RETURN) { todos.add(e.src.value); e.src.value = ""; }} />
+      <input ref=${input} type="text" placeholder="What needs to be done?" onkeypress={e => if (e.which == KeyboardEvent.DOM_VK_RETURN) { todos.add(e.src.value); e.src.value = ""; }} />
       <if {todos.items.length > 0}>
         <if {todos.unfinished > 0}>
           <button class="mark-all" onclick={for (i in todos.items) i.completed = true}>Mark all as completed</button>
@@ -41,12 +42,15 @@ private class Header extends View {
     </header>
   ';
 
+  function viewDidMount()
+    input.current.focus();
+
   // override function afterMounting(_) 
   //   get('header input').focus();
   
 }
 
-private class Footer extends View {
+class Footer extends View {
   @:attribute var todos:TodoList;
   @:attribute var filter:TodoFilter;
   function render() '

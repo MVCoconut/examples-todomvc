@@ -20,10 +20,10 @@ class TodoItemView extends View {
       }
 
     return @hxx '
-      <li class="todo-item" data-completed=${item.completed} data-editing={isEditing}>
+      <li class="todo-item" data-completed=${item.completed} data-editing={js.Lib.undefined}>
         <input name="completed" type="checkbox" checked=${item.completed} onchange={item.completed = event.src.checked} />
         <if ${isEditing}>
-          <input name="description" type="text" value=${item.description} onchange={edit(event.src.value)} onblur={isEditing = false} />
+          <input ref=${i -> if (i != null) i.focus()} name="description" type="text" value=${item.description} onchange={edit(event.src.value)} onblur={isEditing = false} />
         <else>
           <span class="description" ondblclick=${this.isEditing = true}>{item.description}</span>
           <button class="delete" onclick=${ondeleted(item)}>Delete</button>

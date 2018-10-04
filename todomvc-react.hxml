@@ -1,0 +1,4 @@
+todomvc.hxml
+-lib coconut.react
+-D react_global
+-js bin/todomvc-react.js
