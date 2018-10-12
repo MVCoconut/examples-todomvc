@@ -6,7 +6,7 @@ using tink.CoreApi;
 
 class TodoFilter implements Model {
   @:constant var options:List<Named<TodoItem->Bool>> = [
-    new Named('All', _ -> true),
+    new Named('All', function (_) return true),
     new Named('Active', TodoItem.isActive),
     new Named('Completed', TodoItem.isCompleted),
   ];

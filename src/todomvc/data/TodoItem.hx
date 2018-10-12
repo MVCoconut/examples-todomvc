@@ -3,7 +3,7 @@ package todomvc.data;
 import coconut.data.Model;
 
 class TodoItem implements Model {
-  
+  @:constant var id:String = Std.string(idCounter++); static var idCounter = 0;
   @:editable var completed:Bool = @byDefault false;
   @:editable var description:String;
 

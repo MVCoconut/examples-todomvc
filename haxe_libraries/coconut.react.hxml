@@ -3,7 +3,7 @@
 -lib coconut.ui
 -lib react
 -lib xDOM
--cp ${HAXE_LIBCACHE}/coconut.react/0.0.0/github/37fca63e833eda05833d50d8ce7ba938c3ee0419/src
+-cp ../coconut.react/src
 --macro coconut.react.macros.Setup.all()
 -D coconut_react
 -D react_ignore_empty_render

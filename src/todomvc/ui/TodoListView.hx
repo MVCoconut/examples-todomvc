@@ -16,7 +16,7 @@ class TodoListView extends View {
         <ol>
           <for {item in todos.items}>
             <if {filter.matches(item)}>
-              <TodoItemView key={item} item={item} ondeleted={todos.delete(item)} />
+              <TodoItemView key={item.id} item={item} ondeleted={todos.delete(item)} />
             </if>
           </for>
         </ol>
