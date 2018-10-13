@@ -31,7 +31,7 @@ class Header extends View {
   @:ref var input:InputElement;
   function render() '
     <header>
-      <input ref=${input} type="text" placeholder="What needs to be done?" onkeypress={e => if (e.which == KeyboardEvent.DOM_VK_RETURN) { todos.add(e.src.value); e.src.value = ""; }} />
+      <input ref=${input} type="text" placeholder="What needs to be done?" onkeypress={e => if (e.which == KeyboardEvent.DOM_VK_RETURN && e.src.value != "") { todos.add(e.src.value); e.src.value = ""; }} />
       <if {todos.items.length > 0}>
         <if {todos.unfinished > 0}>
           <button class="mark-all" onclick={for (i in todos.items) i.completed = true}>Mark all as completed</button>
@@ -44,9 +44,6 @@ class Header extends View {
 
   function viewDidMount()
     input.current.focus();
-
-  // override function afterMounting(_) 
-  //   get('header input').focus();
   
 }
 

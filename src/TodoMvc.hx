@@ -6,10 +6,14 @@ import todomvc.ui.TodoListView;
 
 class TodoMvc {
   static function main() {
-    // react.ReactDOM.render(
-    //   hxx('<TodoListView />'),
-    //   cast document.body.appendChild(document.createDivElement())
-    // );
-    hxx('<TodoListView />').mountInto(document.body.appendChild(document.createDivElement()));
+    var list = new todomvc.data.TodoList();
+    #if react
+    react.ReactDOM.render(
+      hxx('<TodoListView todos=${list}/>'),
+      cast document.body.appendChild(document.createDivElement())
+    );
+    #else
+    hxx('<TodoListView todos=${list} />').renderInto(document.body.appendChild(document.createDivElement()));
+    #end
   }
 }
