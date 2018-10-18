@@ -8,7 +8,7 @@
   },
   "scripts": {
     "postinstall": "lix download",
-    "build": "haxe todomvc.hxml"
+    "build": "haxe todomvc-vdom.hxml"
   },
   "repository": {
     "type": "git",
