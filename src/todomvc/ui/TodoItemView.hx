@@ -31,8 +31,5 @@ class TodoItemView extends View {
       </li>
     ';
   }
-  // override function afterPatching(_) 
-  //   if (isEditing)
-  //     get('input[type="text"]').focus();
-  
+
 }
