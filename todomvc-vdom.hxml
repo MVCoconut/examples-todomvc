@@ -1,3 +1,6 @@
 todomvc.hxml
 -lib coconut.vdom
+# -lib closure
+-D closure_overwrite
+-D closure_advanced
 -js bin/todomvc-vdom.js
