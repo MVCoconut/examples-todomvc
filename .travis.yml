@@ -1,12 +1,18 @@
 sudo: required
 dist: trusty
 
-language: generic
+language: node_js
+node_js: 8
+
+cache:
+  directories:
+    - $HOME/haxe
+
 os:
   - linux
+  # - osx
 
 install:
-  - nvm use node
   - npm install
 
 script:
