@@ -4,7 +4,7 @@
   "description": "TodoMVCoconut",
   "dependencies": {
     "less": "=2.7.2",
-    "lix": "=15.3.0-alpha.1"
+    "lix": "^15.3.6"
   },
   "scripts": {
     "postinstall": "lix download",
