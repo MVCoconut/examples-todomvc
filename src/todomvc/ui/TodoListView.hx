@@ -43,7 +43,7 @@ class Header extends View {
   ';
 
   function viewDidMount()
-    input.current.focus();
+    input.focus();
   
 }
 
