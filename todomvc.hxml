@@ -1,6 +1,7 @@
 -lib lessie
 -D closure_advanced
 -D closure_overwrite
+-D no-deprecation-warnings
 -cp src
 -dce full
 -main TodoMvc
