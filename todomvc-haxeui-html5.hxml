@@ -1,0 +1,4 @@
+todomvc.hxml
+-lib coconut.haxeui
+-lib haxeui-html5
+-js bin/todomvc-haxeui.js
