@@ -2,7 +2,10 @@ package ;
 
 import js.Browser.*;
 import coconut.Ui.hxx;
-// import todomvc.ui.TodoListView;
+
+#if haxeui_core
+import haxe.ui.core.*;
+#end
 
 class TodoMvc {
   static function main() {
@@ -13,20 +16,20 @@ class TodoMvc {
       list.add('item $i');
 
     #if haxeui_core
-		// var root = new Component();
-		// Screen.instance.addComponent(root);
-		// root.width = 500;
-		// root.height = 500;
-		// coconut.ui.Renderer.mount(
-		// 	root,
-		// 	coconut.Ui.hxx('<MyView />')
-		// );
+		var root = new Component();
+		Screen.instance.addComponent(root);
+		root.width = 500;
+		root.height = 500;
+		coconut.ui.Renderer.mount(
+			root,
+			hxx('<todomvc.haxeui.TodoListView todos=${list} />')
+		);
 		
-		// Toolkit.init();
+		haxe.ui.Toolkit.init();
     #else
     coconut.ui.Renderer.mount(
       cast document.body.appendChild(document.createDivElement()),
-      hxx('<TodoListView todos=${list}/>')
+      hxx('<todomvc.ui.TodoListView todos=${list}/>')
     );
     #end
   }
