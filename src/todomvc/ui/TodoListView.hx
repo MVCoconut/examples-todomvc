@@ -8,8 +8,9 @@ import coconut.ui.*;
 class TodoListView extends View {
   @:attribute var todos:TodoList = new TodoList();
   @:attribute var filter:TodoFilter = new TodoFilter();
+
   function render() '
-    <div class="todo-list" data-empty=${todos.items.length == 0}>
+    <div class="todo-list">
       <h1>todos</h1>
       <Header {...this} />
       <if {todos.items.length > 0}>
