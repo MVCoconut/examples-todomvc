@@ -1,4 +1,0 @@
--D lessie=1.1.1
-# @install: lix --silent download "haxelib:/lessie#1.1.1" into lessie/1.1.1/haxelib
--cp ${HAXE_LIBCACHE}/lessie/1.1.1/haxelib/src
---macro lessie.Lessie.use()

@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "TodoMVCoconut",
   "dependencies": {
-    "less": "=2.7.2",
     "lix": "^15.3.6"
   },
   "scripts": {

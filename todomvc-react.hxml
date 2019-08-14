@@ -1,4 +1,4 @@
-todomvc.hxml
+todomvc-cix.hxml
 -lib coconut.react-dom
 -D react_global
 -js bin/todomvc-react.js
