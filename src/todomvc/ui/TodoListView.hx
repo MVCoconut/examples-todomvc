@@ -15,14 +15,14 @@ class TodoListView extends View {
     button, input[type="checkbox"] {
       cursor: pointer;
     }
-    
+
     button, input {
       font: inherit;
       &:focus {
         outline:0;
       }
     }
-    
+
     h1 {
       position: absolute;
       top: -150px;
@@ -33,7 +33,7 @@ class TodoListView extends View {
       width: 100%;
 
     }
-    
+
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     html {
       background: #f5f5f5; /* TODO: move to global namespace */
@@ -50,7 +50,7 @@ class TodoListView extends View {
     ol {
       border-top: 2px solid #e4e4e4;
     }
-    
+
     &:not([data-empty]):after {
       content: " ";
       position: absolute;
@@ -112,24 +112,24 @@ class TodoListView extends View {
       input[type="text"] {
         width: 100%;
         padding: 19px;
-        padding-left: 60px;  
+        padding-left: 60px;
         border: none;
         font: inherit;
         &::-webkit-input-placeholder {
           font-style: italic;
           font-weight: 300;
           color: #e6e6e6;
-        }      
+        }
         &::-moz-placeholder {
           font-style: italic;
           font-weight: 300;
           color: #e6e6e6;
-        }      
+        }
         &::placeholder {
           font-style: italic;
           font-weight: 300;
           color: #e6e6e6;
-        }      
+        }
       }
       button {
         position: absolute;
@@ -152,13 +152,13 @@ class TodoListView extends View {
           display: block;
         }
       }
-    }  
+    }
   ');
   @:attribute var todos:TodoList = new TodoList();
   @:attribute var filter:TodoFilter = new TodoFilter();
 
   function render() '
-    <div class=${ROOT}>
+    <div class=${ROOT} data-empty=${todos.items.length == 0}>
       <h1>todos</h1>
       <Header {...this} />
       <if {todos.items.length > 0}>
@@ -193,7 +193,7 @@ class Header extends View {
 
   function viewDidMount()
     input.focus();
-  
+
 }
 
 class Footer extends View {
@@ -201,7 +201,7 @@ class Footer extends View {
   @:attribute var filter:TodoFilter;
   function render() '
     <footer>
-      
+
       <span>
         <switch {todos.unfinished}>
           <case {1}>1 item
@@ -218,7 +218,7 @@ class Footer extends View {
       <if {todos.hasAnyCompleted}>
         <button onclick={todos.clearCompleted}>Clear Completed</button>
       </if>
-      
+
     </footer>
   ';
 }
