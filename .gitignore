@@ -1,3 +1,4 @@
 /bin/*.js
+/bin/*.hotswapmeta
 /node_modules
 /bin/styles.css

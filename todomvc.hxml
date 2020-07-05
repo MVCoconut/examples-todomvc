@@ -1,5 +1,6 @@
 -D closure_advanced
 -D closure_overwrite
+-lib hotswap
 # -lib closure
 -D no-deprecation-warnings
 -cp src
