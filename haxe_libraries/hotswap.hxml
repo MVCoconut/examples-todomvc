@@ -1,6 +1,6 @@
-# @install: lix --silent download "gh://github.com/back2dos/hotswap#4ad181c74f9e63369ce807df87dc0e0757b17de5" into hotswap/0.0.0/github/4ad181c74f9e63369ce807df87dc0e0757b17de5
+# @install: lix --silent download "gh://github.com/back2dos/hotswap#2013989d24871ef5e92bfeceb1293952a5369528" into hotswap/0.0.0/github/2013989d24871ef5e92bfeceb1293952a5369528
 -lib tink_macro
--cp ${HAXE_LIBCACHE}/hotswap/0.0.0/github/4ad181c74f9e63369ce807df87dc0e0757b17de5/src
+-cp ${HAXE_LIBCACHE}/hotswap/0.0.0/github/2013989d24871ef5e92bfeceb1293952a5369528/src
 -D hotswap=0.0.0
 --macro hotswap.Macro.use()
 -D js-unflatten
