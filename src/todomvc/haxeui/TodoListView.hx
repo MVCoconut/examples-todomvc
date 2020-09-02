@@ -35,8 +35,8 @@ class Header extends View {
   function handleSubmit()
     switch tf.text.trim() {
       case '':
-      case v: 
-        todos.add(v); 
+      case v:
+        todos.add(v);
         tf.text = "";
     }
   function render() '
@@ -48,13 +48,13 @@ class Header extends View {
           <Button onClick=${for (i in todos.items) i.completed = false} text="Unmark all" />
         </if>
       </if>
-      <TextField ref=${tf} placeholder="What needs to be done?" onKeyDown={e => if (e.keyCode == 13) handleSubmit()} />
+      <TextField ref=${tf} placeholder="What needs to be done?" onKeyDown={e -> if (e.keyCode == 13) handleSubmit()} />
     </HBox>
   ';
 
   function viewDidMount()
     tf.focus = true;
-  
+
 }
 
 class Footer extends View {
@@ -63,12 +63,12 @@ class Footer extends View {
 
   function render() '
     <HBox>
-      
-      <Label 
+
+      <Label
         text=${switch todos.unfinished {
           case 1: '1 item left';
           case v: '$v items left';
-        }} 
+        }}
       />
 
       <HBox>
@@ -80,7 +80,7 @@ class Footer extends View {
       <if {todos.hasAnyCompleted}>
         <Button onClick={todos.clearCompleted} text="Clear Completed" />
       </if>
-      
+
     </HBox>
   ';
 }
